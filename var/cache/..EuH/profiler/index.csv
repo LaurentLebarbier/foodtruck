@@ -1,0 +1,13 @@
+d0ef01,::1,GET,http://localhost/foodtruck/public/,1635859472,,200
+204a33,::1,GET,http://localhost/foodtruck/public/,1635859479,,200
+a3750a,::1,GET,http://localhost/foodtruck/public/,1635859566,,200
+5bc20a,::1,GET,http://localhost:8000/favicon.ico,1635859822,81bdd4,404
+e98a0a,::1,GET,http://localhost:8000/profil/,1635860000,,302
+28b633,::1,GET,http://localhost:8000/favicon.ico,1635860021,8ebc61,404
+48f533,::1,GET,http://localhost:8000/favicon.ico,1635864004,c626b7,404
+9a9e33,::1,GET,http://localhost:8000/,1635864711,,200
+cb5e33,::1,POST,http://localhost:8000/reset-password,1635865884,,302
+e9b601,::1,GET,http://localhost:8000/admin/,1635866003,,200
+76830a,::1,GET,http://localhost:8000/,1635866104,,200
+f9c00a,::1,POST,http://localhost:8000/login,1635866129,,302
+ca6e33,::1,GET,http://localhost:8000/logout,1635866293,,302

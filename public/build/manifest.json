@@ -1,0 +1,22 @@
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/menu.css": "/build/menu.css",
+  "build/menu.js": "/build/menu.js",
+  "build/user.css": "/build/user.css",
+  "build/user.js": "/build/user.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/node_modules_web-vitals_dist_web-vitals_js.js": "/build/node_modules_web-vitals_dist_web-vitals_js.js",
+  "build/vendors-node_modules_core-js_internals_a-constructor_js-node_modules_core-js_modules_es_objec-0bff99.js": "/build/vendors-node_modules_core-js_internals_a-constructor_js-node_modules_core-js_modules_es_objec-0bff99.js",
+  "build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-88dd62.js": "/build/vendors-node_modules_axios_index_js-node_modules_core-js_modules_es_array_concat_js-node_modu-88dd62.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-907e20.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-907e20.js",
+  "build/images/contact.webp": "/build/images/contact.webp",
+  "build/images/headerburger.jpg": "/build/images/headerburger.jpg",
+  "build/images/inscription.jpg": "/build/images/inscription.jpg",
+  "build/images/connexion.jpg": "/build/images/connexion.jpg",
+  "build/images/foodtruck.jpg": "/build/images/foodtruck.jpg",
+  "build/images/panier.png": "/build/images/panier.5e7d1a74.png",
+  "build/images/icons8-instagram-80.png": "/build/images/icons8-instagram-80.png",
+  "build/images/icons8-facebook-entouré-80.png": "/build/images/icons8-facebook-entouré-80.png",
+  "build/images/inscription.jpg:Zone.Identifier": "/build/images/inscription.jpg:Zone.Identifier"
+}
