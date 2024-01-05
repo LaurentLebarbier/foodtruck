@@ -34,6 +34,8 @@ class Paginator implements Countable, IteratorAggregate
 {
     use SQLResultCasing;
 
+    public const HINT_ENABLE_DISTINCT = 'paginator.distinct.enable';
+
     /** @var Query */
     private $query;
 
@@ -106,7 +108,7 @@ class Paginator implements Countable, IteratorAggregate
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return int
      */
@@ -125,7 +127,7 @@ class Paginator implements Countable, IteratorAggregate
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @return Traversable
      * @psalm-return Traversable<array-key, T>
