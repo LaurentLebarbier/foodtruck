@@ -1,0 +1,42 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}
+    Modification du mot de passe
+    {% if (app.user.firstname or app.user.name) %}
+        de {{ app.user.firstname }} {{ app.user.name }}
+    {% else %}
+        de {{ app.user.email }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="grix">
+        {% for message in app.flashes('error') %}
+            <div class="col-2">
+                <div class="error">{{ message }}</div>
+            </div>
+        {% endfor %}
+        <div class="col-4">
+            {% if (app.user.firstname or app.user.name) %}
+                <h1>Modification du mot de passe de {{ app.user.firstname }} {{ app.user.name }}</h1>
+            {% else %}
+                <h1>Modification du mot de passe de {{ app.user.email}}</h1>
+            {% endif %}
+        </div>
+        <form  class="form" method="post">
+            <div>
+                <label for="old_mdp">Ancien mot de passe : </label>
+                <input type="password" id="old_mdp" name="old_mdp"  required>
+            </div>
+            <div class="form-field">
+                <label for="mdp">Mot de passe : </label>
+                <input type="password" id="mdp" name="pass"  required>
+            </div>
+            <div class="form-field">
+                <label for="mdp2">Confirmer le mot de passe : </label>
+                <input type="password" id="mdp2" name="pass2"  required>
+            </div>
+            <button class="myButton3">Valider</button>
+        </form>
+    </div>
+{% endblock %}
