@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('menu') }}
+{% endblock %}
+{% block title 'Notre carte'%}
+
+{% block body %}
+
+
+    <div id="root"></div>
+
+   
+{% endblock %}
+
+{% block javascripts %}
+
+
+     <script>
+        window.REP_LOG_APP_PROPS = {
+            itemOptions: [
+                    {% for produit in produits %}
+                        {
+                            id: {{ produit.id }},
+                            name: "{{produit.name}}",
+                            description: "{{produit.description}}", 
+                            price: {{produit.prix}},
+                            image: "{{produit.base64}}",
+                            category: [ 
+                                {% for option in produit.options %}
+                                    "{{option.name}}",
+                                {% endfor %} 
+                            ],
+                            stock: "{{produit.stock}}"
+
+                        },
+                    {% endfor %}
+            ],
+        }
+    </script>
+
+    <script>
+                    {% if is_granted('ROLE_USER') %}
+                    window.loggedIn = true
+                    window.sessionMail = "{{app.user.email}}"
+                    {% else %}
+                    window.loggedIn = false
+                    {% endif %}
+
+    </script>
+
+
+    {{ encore_entry_script_tags('menu') }}
+
+
+{% endblock %}

@@ -1,0 +1,136 @@
+.myButton,.edit-form button {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, $mainColor 5%, $thirdcolor 100%);
+	background-color:$mainColor;
+	border-radius:6px;
+	border:1px solid $mainColor;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px $thirdcolor;
+}
+.myButton:hover,.edit-form button:hover {
+	background:linear-gradient(to bottom, $thirdcolor 5%, $mainColor 100%);
+	background-color:$thirdcolor;
+}
+.myButton:active,.edit-form button:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton2 {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, $thirdcolor 5%, $mainColor 100%);
+	background-color:$thirdcolor;
+	border-radius:6px;
+	border:1px solid $thirdcolor;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px $mainColor;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, $mainColor 5%, $thirdcolor 100%);
+	background-color:$mainColor;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton3 {
+	box-shadow:inset 0px 39px 0px -24px $mainColor;
+	background-color:$thirdcolor;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px $thirdcolor;
+}
+.myButton3:hover {
+	background-color:$mainColor;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
+
+
+/*** Menu ***/
+.myButton-cat {
+	box-shadow: 1px 2px 0px 0px #899599;
+	background:linear-gradient(to bottom, $mainColor 5%, $thirdcolor 100%);
+	background-color:$mainColor;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px $thirdcolor;
+}
+.myButton-cat:hover {
+	background:linear-gradient(to bottom, $thirdcolor 5%, $mainColor 100%);
+	background-color:$thirdcolor;
+}
+.myButton-cat:active {
+	position:relative;
+	top:1px;
+}
+
+/*** admin ***/
+
+
+
+
+.btn-adm{
+    position: relative;
+    display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.btn-adm .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1em;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+}
+
+.btn-adm:hover .tooltiptext {
+    visibility: visible;
+}
+.btn-adm .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}

@@ -1,0 +1,36 @@
+{
+    "devDependencies": {
+        "@babel/preset-react": "^7.14.5",
+        "@symfony/stimulus-bridge": "^2.0.0",
+        "@symfony/webpack-encore": "^1.0.0",
+        "core-js": "^3.0.0",
+        "file-loader": "^6.2.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass": "^1.42.1",
+        "sass-loader": "^12.1.0",
+        "stimulus": "^2.0.0",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@stripe/react-stripe-js": "^1.6.0",
+        "@stripe/stripe-js": "^1.19.1",
+        "axios": "^0.23.0",
+        "jquery": "^3.6.0",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-stripe-checkout": "^2.6.3",
+        "select2": "^4.1.0-rc.0",
+        "stripe": "^8.181.0",
+        "web-vitals": "^2.1.1",
+        "webpack-dev-server": "^4.3.1"
+    }
+}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+        <div class="app">
+            <div></div>
+                <div class="app__header">   
+                    <p>
+                    {% if app.user%}
+                        Bonjour
+                        {% if (app.user.firstname or app.user.name) %}
+                            {{ app.user.firstname }} {{ app.user.name }}
+                        {% else %}
+                            {{ app.user.email }}
+                        {% endif %}
+                    {% endif %}
+                    </p>
+                    <p class="app__presentation">
+                        Bienvenue sur le FoodBus DAQ de Luxeuil
+                    </p>
+                </div>
+        </div>
+
+    <div class="container">
+        <h2>Nos nouveautés</h2>
+        <div id="root"></div>
+        <div class="row flex">
+            {% for produit in produits %}
+                {% if produit.base64 %}
+                    <a href="{{ path('produit_show', {id: produit.id, slug: produit.slug}) }}" class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                   {{ produit.name }}
+                                </h5>
+                                <div class="col">
+                                    <img src="{{ produit.base64 }}" alt="{{ produit.name }}">
+                                </div>
+                                <p class="card-text">{{ produit.description }}</p>
+                                <div class="text-primary" style="font-weight: bold; font-size: 2rem;">{{ produit.prix }}
+                                    €</div>
+                            </div>
+                        </div>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}
