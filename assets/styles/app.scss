@@ -1,0 +1,101 @@
+@import './variable.scss';
+@import './heritage.scss';
+@import './header.scss';
+@import './home.scss';
+@import './nav.scss';
+@import './boutons.scss';
+@import './formulaire.scss';
+@import './table.scss';
+@import './footer.scss';
+@import './success.scss';
+@import './error.scss';
+@import './user/history.scss';
+@import './admin/admin';
+@import './waiting-cart.scss';
+@import "contact";
+@import "login";
+@import "inscription";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+  /*hide scrollbar*/
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  }
+  
+  ::-webkit-scrollbar {
+  display: none; /*chrome safari opera*/
+  }
+
+body{
+    background: $secondarycolor;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 1280px;
+    margin: auto
+}
+
+footer {
+  position: relative;
+}
+
+@media screen and (max-width: 1280px) {
+
+    body {
+        width: 100%;
+		margin: 0;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+  }
+
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    h1, h2, h3 {
+      margin: 0;
+    }
+  }
+  
+  /*** Flex **/
+  .col-1 {
+    flex: 1;
+  }
+  .col-2 {
+    flex: 2;
+  }
+  .col-3 {
+    flex: 3;
+  }
+  .col-4 {
+    flex: 4;
+  }
+  
+
+

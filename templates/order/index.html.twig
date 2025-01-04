@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Votre commande' %}
+
+{% block body %}
+    {% if order is defined and order is not null  %}
+        <h1>Votre commande {{ order.reference }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Quantité</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in produits %}
+                <tr>
+                    <td>{{ produit.produit.name }}</td>
+                    <td>{{ produit.quantite }}</td>
+                    <td>{{ produit.produit.prix }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+             <tfoot>
+             <tr>
+                <td style="opacity: 0"></td>
+                <td>Total</td>
+                <td>{{ order.price }}</td>
+             <tr>
+
+             </tr>
+             </tfoot>
+        </table>
+    {% else %}
+        PAS DE PANIER
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('menu') }}
+{% endblock %}

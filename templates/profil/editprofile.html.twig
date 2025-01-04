@@ -1,0 +1,39 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}
+    Modification du profil
+    {% if (app.user.firstname or app.user.name) %}
+        de {{ app.user.firstname }} {{ app.user.name }}
+    {% else %}
+        de {{ app.user.email }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="grix">
+        <div class="col-4">
+            {% if (app.user.firstname or app.user.name) %}
+                <h1>Modification du profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
+            {% else %}
+                <h1>Modification du profil de {{ app.user.email}}</h1>
+            {% endif %}
+        </div>
+
+        {{ form_start(form, {'attr': {'class': 'form'}})}}
+
+        <div class="form-field">
+         {{ form_label(form.email, 'Modifier email :') }}
+         {{ form_widget(form.email) }}
+        </div>
+        <div class="form-field">
+         {{ form_label(form.name, 'Nom :') }}
+         {{ form_widget(form.name) }}
+        </div>
+        <div class="form-field">
+         {{ form_label(form.firstname, 'Prénom :')}}
+         {{ form_widget(form.firstname) }}
+        </div>
+         {{ form_row(form.Valider, {'attr': {'class': 'myButton3'}}) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
