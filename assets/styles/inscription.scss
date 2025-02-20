@@ -1,0 +1,36 @@
+.inscription{
+  min-height: 85.5vh;
+  display: flex;
+}
+
+.inscription .form{
+  width: 80%;
+  background: #4242;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: 960px){
+    margin-bottom: 20%;
+    margin-top: 5%;
+  }
+}
+
+.inscription__img {
+  width: 35%;
+  @media screen and (max-width: 960px){
+    width: 100%;
+  }
+}
+
+.inscription__img img {
+  width: 100%;
+}
+
+.inscription__form{
+  width: 50%;
+  color: $thirdcolor;
+  @media screen and (max-width: 960px){
+    width: 100%;
+    margin-top: 5%;
+  }
+}

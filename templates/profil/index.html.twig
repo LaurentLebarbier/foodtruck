@@ -1,0 +1,44 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}
+    Profil
+    {% if (app.user.firstname or app.user.name) %}
+        de {{ app.user.firstname }} {{ app.user.name }}
+    {% else %}
+        de {{ app.user.email }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="grix xs4">
+        {% for message in app.flashes('message') %}
+            <div class="col-2">
+                <div class="success">{{ message }}</div>
+            </div>
+        {% endfor %}
+        {% if (app.user.firstname or app.user.name) %}
+            <div class="col-4">
+                <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
+            </div>
+            <div class="grix--flex">
+                <div class="col-1">Nom :</div>
+                <div class="col-8">{{ app.user.name }}</div>
+            </div>
+            <div class="grix--flex">
+                <div class="col-1">Prénom :</div>
+                <div class="col-8">{{ app.user.firstname }}</div>
+            </div>
+        {% else %}
+            <div class="col-2">
+                <h1>Profil de {{ app.user.email }}</h1>
+            </div>
+        {% endif %}
+        <div class="grix--flex">
+            <div class="col-1">Email :</div>
+            <div class="col-8">{{ app.user.email }}</div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+{% endblock %}

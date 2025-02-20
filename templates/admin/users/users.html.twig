@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+
+{% block body %}
+
+    {% for message in app.flashes('success') %}
+        <div class="col-2">
+            <div class="success">{{ message }}</div>
+        </div>
+    {% endfor %}
+    <table>
+
+        <thead>
+        <tr>
+            <td colspan="4">
+                <h1>Liste des utilisateurs :</h1>
+            </td>
+        </tr>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Rôles</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {# on boucle les utilisateurs #}
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        {% for role in user.roles %}
+                            {% if role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% elseif role == "ROLE_ABONNE"%}
+                                Abonné
+                            {% elseif role == "ROLE_MODO"%}
+                                Modérateur
+                            {% else %}
+                                Utilisateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td class="modifier">
+                        <a href="{{ path('admin_modifier_utilisateurs', {id: user.id}) }}"> <button class="myButton3">Modifier</button> </a>
+                        <form method="POST" action="{{ path('admin_supprimer_utilisateurs', {id: user.id}) }}"
+                        style="display: inline-block" onsubmit="return confirm('Êtes vous vraiment sûr ?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+                            <button class="myButton3">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <td colspan="4">
+                <a href="{{ path('admin_index') }}"><button class="myButton3">Retour</button></a>
+            </td>
+        </tfoot>
+    </table>
+
+
+{% endblock %}

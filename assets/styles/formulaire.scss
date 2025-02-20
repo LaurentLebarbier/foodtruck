@@ -1,0 +1,75 @@
+@import './variable.scss';
+
+
+
+ input[type=text], input[type=email], input[type=password], select, textarea {
+    width: 100%;
+    padding: 12px; 
+    border: 2px solid $thirdcolor;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  .form {
+    background-color: $mainColor;
+    color: $secondarycolor;
+    margin: 5% auto;
+    overflow: hidden;
+    padding: 2.5em 2em 2em 2em;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 5px 10px 10px rgba($thirdcolor, 0.2);
+  }
+
+  .form-error{
+    text-align: center;
+    width: 100%;
+    margin: 0.5em 0;
+    background-color: $thirdcolor;
+    color: $secondarycolor;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .form-error ul {
+    list-style: none;
+  }
+
+  .form h1 {
+      margin-bottom: 10%;
+  }
+
+  input[type=checkbox] {
+    width: 50%;
+  }
+
+  input[type=file] {
+    opacity: 0;
+  }
+
+  /*** inscription ***/
+
+  .sweet-candy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+  }
+
+/*** Edit produit ***/
+.imagefile {
+  margin-bottom: 1em;
+}
+
+  /*** contact ***/
+
+
+
+  @media screen and (max-width: 960px) {
+    .form {
+      width: 80%;
+    }
+    
+  }

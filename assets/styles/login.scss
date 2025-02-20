@@ -1,0 +1,43 @@
+.loginForm{
+  min-height: 85.5vh;
+  display: flex;
+}
+
+.loginForm .form{
+  width: 80%;
+  background: #4242;
+  margin: auto;
+  @media screen and (max-width: 960px){
+    margin-bottom: 20%;
+    margin-top: 5%;
+  }
+}
+
+.loginForm--flex{
+  display: flex;
+  justify-content: space-around;
+  color:$thirdcolor;
+  @media screen and (max-width: 960px){
+    flex-direction: column;
+    margin-bottom: 20%;
+  }
+}
+
+.loginForm__form{
+  width: 50%;
+  @media screen and (max-width: 960px){
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+
+.loginForm__img {
+  width: 35%;
+  @media screen and (max-width: 960px){
+    width: 100%;
+  }
+}
+
+.loginForm__img img {
+  width: 100%;
+}
